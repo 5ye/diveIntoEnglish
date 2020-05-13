@@ -1,0 +1,174 @@
+----> 2 класс
+
+Этап 1
+bed = кровать
+tent = палатка
+ten = десять
+bell = звонок
+net = сачок
+belt = ремень
+egg = яйцо
+nest = гнездо
+desk = парта
+pen = ручка
+elf = эльф
+
+Этап 2
+milk = молоко
+hill = холм
+kid = козленок
+pig = поросенок
+six = шесть
+wind = ветер
+
+Этап 3
+dog = собака
+box = коробка
+fox = лиса
+doll = кукла
+frog = лягушка
+pond = пруд
+troll = троль
+lorry = грузовик
+
+Этап 4
+bus = автобус
+sun = солнце
+jug = кувшин
+cup = чашка
+mug = кружка
+
+Этап 5
+tree = дерево
+street = улица
+bee = пчела
+sweet = конфета
+
+Этап 6
+shop = магазин
+ship = корабль
+fish = рыба
+dish = тарелка
+shelf = полка
+sheep = овца
+
+Этап 7
+cat = кошка
+cap = кепка
+ant = муравей
+bag = сумка
+lamp = лампа
+van = фургон
+map = карта
+hat = шляпа
+
+Этап 8
+cock = петух
+clock = часы
+sock = носок
+duck = утка
+black = черный
+
+Этап 9
+book = книга
+cook = повар
+hook = крючок
+wood = лес
+
+Этап 10
+bench = скамейка
+chimp = шимпанзе
+chick = цыпленок
+cherry = вишня
+match = спичка
+
+Этап 11
+car = машина
+star = звезда
+park = парк
+door = дверь
+farm = ферма
+port = порт
+horse = лошадь
+floor = пол
+
+Этап 12
+queen = королева
+quilt = одеяло
+mum = мама
+dad = папа
+granny = бабушка
+grandad = дедушка
+
+Этап 13
+name = имя
+game = игра
+cake = торт
+lake = озеро
+plane = самолет
+plate = тарелка
+we = мы
+
+Этап 14
+rose = роза
+stone = камень
+bone = кость
+phone = телефон
+boat = лодка
+coat = пальто
+old = старый
+cold = холод
+
+Этап 15
+tulip = тюльпан
+pupil = ученик
+student = студент
+cute = милый
+
+Этап 16
+bike = велосипед
+kite = воздушный змей
+pilot = пилот
+pie = пирог
+five = пять
+nine = девять
+my = мой
+bye-bye = до свидания
+
+Этап 17
+bird = птица
+girl = девочка
+birch = береза
+nurse = медсестра
+turtle = черепаха
+purple = фиолетовый
+mermaid = русалка
+servant = прислуга
+fern = папоротник
+
+Этап 18
+apple = яблоко
+plum = слива
+lemon = лимон
+banana = банан
+grape = виноград
+orange = апельсин
+
+Этап 19
+clown = клоун
+cow = корова
+down = вниз
+brown = коричневый
+mouse = мышь
+blouse = блузка
+house = дом
+
+Этап 20
+room = комната
+roof = крыша
+boot = ботинок
+spoon = ложка
+moon = луна
+school = школа
+afternoon = полдень
+

@@ -274,6 +274,7 @@ public class GamePlay : MonoBehaviour
     public void NotifyUserAnswer(int index)
     {
         BubbleClickSound.Play();
+        Debug.Log($"NotifyUserAnswer - {_state}");
         if (_state == GamePlayState.WaitUserAnswer)
         {
             _lastAnswerIndex = index;
@@ -284,6 +285,8 @@ public class GamePlay : MonoBehaviour
             _submarineMover = new NodeMover(Submarine.Single.gameObject, null, Helpers.IndexToPosition(index), 5);
             ActiveTest.CurrentQuestion.RegisterAnswer(index);
         }
+        else
+            Debug.Log($"!!!");
     }
 
     /// <summary>
@@ -291,6 +294,8 @@ public class GamePlay : MonoBehaviour
     /// </summary>
     private void NotifySubmarineMovedToPosition()
     {
+        const float animationItemsSpeed = 10.0f;
+        
         _lastSubmarinePositionIndex = ActiveTest.CurrentQuestion.SelectedAnswerIndex;
         // Рисование мин и монеток
         for (var i = 0; i < ActiveTest.CurrentQuestion.Answers.Length; i++)
@@ -305,7 +310,7 @@ public class GamePlay : MonoBehaviour
                     var coin = Instantiate(CoinNode);
                     coin.tag = i.ToString();
                     coin.transform.position = new Vector3(0.6f * ScreenSize.x + coinWidth * 1.1f * j, yPosition);
-                    _objectMovers.Add(new NodeMover(coin, - 1.1f * ScreenSize.x / 2f, null, 10));
+                    _objectMovers.Add(new NodeMover(coin, - 1.1f * ScreenSize.x / 2f, null, animationItemsSpeed));
                 }
                 // Если это последний вопрос уровня, рисуем жизни
                 if (ActiveTest.QuestionIndex == ActiveTest.QuestionsCount - 1 && ActiveTest.Kind == TestKind.WordIsRussian)
@@ -317,7 +322,7 @@ public class GamePlay : MonoBehaviour
                         var life = Instantiate(LifeNode);
                         life.tag = i.ToString();
                         life.transform.position = new Vector3(0.6f * ScreenSize.x + coinWidth * 1.1f * _countdownValue + lifeWidth * 1.2f * j, yPosition);
-                        _objectMovers.Add(new NodeMover(life, -1.1f * ScreenSize.x / 2f, null, 10));
+                        _objectMovers.Add(new NodeMover(life, -1.1f * ScreenSize.x / 2f, null, animationItemsSpeed));
                     }
                 }
             }
@@ -326,7 +331,7 @@ public class GamePlay : MonoBehaviour
                 var mine = Instantiate(MineNode);
                 mine.tag = i.ToString();
                 mine.transform.position = new Vector3(0.6f * ScreenSize.x, yPosition);
-                _objectMovers.Add(new NodeMover(mine, -1.1f * ScreenSize.x / 2f, null, 10));
+                _objectMovers.Add(new NodeMover(mine, -1.1f * ScreenSize.x / 2f, null, animationItemsSpeed));
             }
         }
     }
@@ -345,6 +350,7 @@ public class GamePlay : MonoBehaviour
     /// </summary>
     private void NotifyPossibleGotoNextQuestion()
     {
+        Debug.Log($"NotifyPossibleGotoNextQuestion, _state = {_state}, _answersHidden = {_answersHidden}, _movieShown = {_movieShown} ");
         if (_state == GamePlayState.BeginShowQuestionResultAnimation && _answersHidden && _movieShown)
         {
             _state = GamePlayState.BeginShowQuestion;
@@ -357,6 +363,7 @@ public class GamePlay : MonoBehaviour
     /// </summary>
     public void NotifyAnswersHide()
     {
+        Debug.Log($"NotifyAnswersHide()  _state == BeginShowQuestionResultAnimation");
         if (_state == GamePlayState.BeginShowQuestionResultAnimation)
         {
             _answersHidden = true;

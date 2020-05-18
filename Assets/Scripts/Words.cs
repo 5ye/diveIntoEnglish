@@ -73,10 +73,17 @@ public class Words : MonoBehaviour
     public void NotifyWordLeave()
     {
         _wordsShown++;
+        Debug.Log($"NotifyWordLeave() - {_wordsShown}");
         if (_wordsShown == _buttonAnimatos.Length)
+        {
             GamePlay.Single.NotifyAnswersHide();
+            Debug.Log($"_wordsShown == _buttonAnimatos.Length");
+        }
         else
+        {
             _buttonAnimatos[_wordsShown].SetBool("isHidden", true);
+            Debug.Log($"_buttonAnimatos[_wordsShown].SetBool(\"isHidden\", true);");
+        }
     }
 
     /// <summary>
@@ -85,6 +92,7 @@ public class Words : MonoBehaviour
     /// <param name="btnObject"></param>
     public void NotifyBtnClick(int index)
     {
+        Debug.Log("NotifyBtnClick");
         GamePlay.Single.NotifyUserAnswer(index);
     }
 }

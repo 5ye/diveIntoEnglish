@@ -18,7 +18,10 @@ public class Word : MonoBehaviour
     /// </summary>
     public void OnWordLeave()
     {
+        Debug.Log($"OnWordLeave - {GamePlay.Single.State}");
         if (GamePlay.Single.State == GamePlayState.BeginShowQuestionResultAnimation)
             Words.Single.NotifyWordLeave();
+        else
+            Debug.Log($"ВОТ ОШИБКА!!");
     }
 }

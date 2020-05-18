@@ -98,10 +98,10 @@ public class StageResultUiBehaviour : MonoBehaviour
         if (GamePlay.Single.HpValue > 0)
         {
             GoodMusic.Play();
-            var maxValue = GamePlay.Single.ActiveTest.QuestionsCount * 2 * GamePlaySettings.TimeToAnswerSeconds;
+            var maxValue = GamePlay.Single.ActiveTest.QuestionsCount * 2 * (GamePlaySettings.TimeToAnswerSeconds - 2);
             for (var i = 0; i < GamePlaySettings.StartHp; i++)
                 maxValue *= 2;
-            if (GamePlay.Single.CoinsValue == maxValue)
+            if (GamePlay.Single.CoinsValue >= maxValue)
             {
                 BestResult.SetActive(true);
                 BackgroundBubbles.SetActive(false);
